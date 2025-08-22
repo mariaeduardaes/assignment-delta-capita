@@ -1,4 +1,4 @@
-export const pdfService = {
+export const pdfClientService = {
     upload: async (file: File): Promise<void> => {
         const formData = new FormData();
         formData.append("file", file);

@@ -2,9 +2,9 @@ import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import UploadPage from "@/app/page";
 
-// Mock for pdfService
-jest.mock("@/services/pdf", () => ({
-  pdfService: {
+// Mock for pdfClientService
+jest.mock("@/services/client/pdf", () => ({
+  pdfClientService: {
     upload: jest.fn().mockResolvedValue("ok"),
   },
 }));
@@ -42,7 +42,6 @@ describe("UploadPage", () => {
 
     fireEvent.change(input, { target: { files: [file] } });
 
-    // Processing deve aparecer
     expect(await screen.findByText(/Processing/i)).toBeInTheDocument();
   });
 

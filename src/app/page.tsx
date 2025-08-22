@@ -1,6 +1,6 @@
 "use client";
 
-import { pdfService } from "@/services/pdf";
+import { pdfClientService } from "@/services/client/pdf";
 import { CloudDownload } from "lucide-react";
 import { useRef, useState } from "react";
 
@@ -36,7 +36,7 @@ export default function UploadPage() {
       // simulating a "processing time" with bar
       await delayWithProgress(3000);
 
-      await pdfService.upload(selectedFile);
+      await pdfClientService.upload(selectedFile);
 
       if (inputRef.current) inputRef.current.value = "";
       setFile(null);
