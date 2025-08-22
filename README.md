@@ -34,3 +34,16 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+## OVERVIEW
+I decided to use Next.js because it gives me both the frontend and a backend in the same project. That way, I don’t need to set up multiple services, and it keeps the whole solution easier to develop and maintain.
+Also I could easily deploy with Vercel, so the app is quickly accesible at the internet and on mobile devices
+
+You can access here: [App link](assignment-delta-capita.vercel.app)
+
+For tests I created mocks to test the services behavior. 
+ 
+If I had more time, I would put a little more effort at the UI to create a more enjoyable interface (it is my favorite part).
+
+And I would create tests for the API, I tried but I had difficulty with the mock for fetchAPI for class response. 
