@@ -1,6 +1,14 @@
 import { NextResponse } from "next/server"
 import { PDFDocument, rgb, StandardFonts } from "pdf-lib"
 
+export const config = {
+  api: {
+    bodyParser: {
+      sizeLimit: "10mb"
+    },
+  }
+};
+
 export async function POST(req: Request) {
   const formData = await req.formData()
   const file = formData.get("file") as File | null
