@@ -28,7 +28,6 @@ describe("UploadPage", () => {
 
     fireEvent.change(input, { target: { files: [file] } });
 
-    // Nome do arquivo deve aparecer
     expect(await screen.findByText("example.pdf")).toBeInTheDocument();
   });
 

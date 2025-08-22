@@ -1,5 +1,6 @@
 export const pdfClientService = {
   upload: async (file: File): Promise<void> => {
+     try {
     const formData = new FormData();
     formData.append("file", file);
 
@@ -19,5 +20,8 @@ export const pdfClientService = {
     a.remove();
 
     setTimeout(() => URL.revokeObjectURL(url), 1000);
+    } catch (error) {
+      console.error("Upload failed:", error);
+    }
   },
 };
